@@ -1,4 +1,4 @@
-# SICRED TESTE API
+# DESAFIO SICRED TESTE API
 
 Estes testes se destinam aos endpoints pertencentes ao Desafio SICRED de Testes-API, sendo reduzidos em escopo para realização de Simulações e Restrições.
 
