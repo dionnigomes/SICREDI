@@ -1,0 +1,26 @@
+package br.com.sicred.desafioSicred;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+
+/**
+ * Unit test for simple App.
+ */
+
+@DisplayName(value = "Testes de API rest do módulo de restrição de CPF")
+public class RestricaoCPFTest 
+{
+    /**
+     * Rigorous Test :-)
+     */
+	@Test
+	@DisplayName("Validar se um CPF tem restrição ou não")
+    public void testVerificaCpfRestrito(String cpf)
+    {
+        		
+		cpf = "12345678912";
+		assertTrue( cpf == "12345678912");
+    }
+}

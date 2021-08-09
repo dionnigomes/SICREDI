@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AlteraSimulcao.testAlteraSimulacaoFaltaInformacao" project="desafioSicred" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="testAlteraSimulacaoFaltaInformacao" classname="br.com.sicred.simulacao.AlteraSimulcao" time="5.581"/>
+</testrun>

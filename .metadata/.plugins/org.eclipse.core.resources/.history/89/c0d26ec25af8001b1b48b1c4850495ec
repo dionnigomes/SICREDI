@@ -1,0 +1,31 @@
+package br.com.sicred.desafioSicred;
+
+import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+/**
+ * Unit test for simple App.
+ */
+
+@DisplayName(value = "Testes de API rest do módulo de restrição de CPF")
+public class RestricaoCpfTest 
+{
+    /**
+     * Rigorous Test :-)
+     */
+	@Test
+	@DisplayName("Validar se um CPF tem restrição ou não")
+    public void testVerificaCpfRestrito()
+    {
+		//Configurando os dados da API rest para restrições
+       baseURI = "http://localhost:8080/";
+       port = 8080;
+       basePath = "/api";
+       
+       //buscar CPF para verificarção de restrição
+       String cpf = given()       
+       
+    }
+}

@@ -1,0 +1,77 @@
+package br.com.sicred.simulacao;
+
+import static io.restassured.RestAssured.basePath;
+import static io.restassured.RestAssured.baseURI;
+import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.port;
+
+import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+
+import io.restassured.http.ContentType;
+
+public class AlteraSimulcao {
+	
+	@BeforeEach
+	public void beforeEach() {
+		//Configurando os dados da API rest para inserção
+	       baseURI = "http://localhost:8080/";
+	       port = 8080;
+	       basePath = "/api";
+	}
+	
+	@Test
+	@DisplayName("Insere uma nova simulação")
+    public void testVerificaCpfRestrito()
+    {       
+       //Insere nova simulação
+       given()
+       	.contentType(ContentType.JSON)
+       	.body("{\r\n"
+       			+ "  \"nome\": \"Fulano de Tal\",\r\n"
+       			+ "  \"cpf\": 97093236014,\r\n"
+       			+ "  \"email\": \"email@email.com\",\r\n"
+       			+ "  \"valor\": 1200,\r\n"
+       			+ "  \"parcelas\": 3,\r\n"
+       			+ "  \"seguro\": true\r\n"
+       			+ "}")
+       	       	
+       	.when()
+       		.put("http://localhost:8080/v1/simulacoes")
+		.then()
+			.assertThat()
+				.statusCode(201);
+              
+    }
+
+	@Test
+	@DisplayName("Insere uma nova simulação")
+    public void testVerificaCpfRestrito()
+    {
+		//Configurando os dados da API rest para inserção
+       baseURI = "http://localhost:8080/";
+       port = 8080;
+       basePath = "/api";
+       
+       //Insere nova simulação
+       given()
+       	.contentType(ContentType.JSON)
+       	.body("{\r\n"
+       			+ "  \"nome\": \"Fulano de Tal\",\r\n"
+       			+ "  \"cpf\": 97093236014,\r\n"
+       			+ "  \"email\": \"email@email.com\",\r\n"
+       			+ "  \"valor\": 1200,\r\n"
+       			+ "  \"parcelas\": 3,\r\n"
+       			+ "  \"seguro\": true\r\n"
+       			+ "}")
+       	       	
+       	.when()
+       		.put("http://localhost:8080/v1/simulacoes")
+		.then()
+			.assertThat()
+				.statusCode(201);
+              
+    }
+
+}
